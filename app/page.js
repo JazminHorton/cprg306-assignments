@@ -7,10 +7,10 @@ export default function Home() {
       <div>
       <h1 className="text-5xl font-bold">CPRG 306: Web Development 2 - Assignments</h1>
       </div>
-      <div className="flex flex-col text-left">
+      <div>
       <StudentInfo></StudentInfo>
       </div>
-      <div classname ="flex flex-col text-left">
+      <div className ="flex items-center text-2xl font-bold">
       <Link href="./week2">week2</Link>
       </div>
     </main>

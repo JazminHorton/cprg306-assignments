@@ -1,4 +1,6 @@
 import { StudentInfo } from "../StudentInfo";
+import Link from "next/link";
+
 
 export default function Home() {
     return (
@@ -7,8 +9,9 @@ export default function Home() {
         <div>
           <h1 className="text-6xl font-bold">My Shopping List</h1>
         </div>
-        <div className="flex flex-col text-left">
+        <div className="container mx-auto p-4">
           <StudentInfo></StudentInfo>
+            <Link href="/">Home</Link>
         </div>
       </main>
   

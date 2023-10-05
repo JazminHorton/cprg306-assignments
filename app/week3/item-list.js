@@ -62,3 +62,15 @@ const items = [
     category: "household",
   },
 ];
+
+function ItemList() {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <Item key={index} {...item} />
+      ))}
+    </ul>
+  );
+}
+
+export default ItemList;

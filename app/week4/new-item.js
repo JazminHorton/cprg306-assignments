@@ -16,14 +16,6 @@ const NewItem = () => {
     return !error;
   };
   
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-  };
-  
-  const handleDecrement = () => {
-    quantity > 1 && setQuantity(quantity - 1);
-  };
-  
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
@@ -42,8 +34,8 @@ const NewItem = () => {
 
   return (
     <div>
-      <h2 className="text-black">useStates and Hooks</h2>
       <form onSubmit={handleSubmit} className="p-2 m-4 bg-black text-black max-w-sm w-full">
+      <h1 className="text-2xl text-center text-white max-w-sm w-full">Add new Item</h1>
         <div className="mb-2">
           <input
             type="text"
@@ -91,20 +83,6 @@ const NewItem = () => {
           </div>
         </div>
         {error && <p className="error-message">{error}</p>}
-        <button
-          type="button"
-          onClick={handleIncrement}
-          className="w-full mt-4 py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
-        >
-          +
-        </button>
-        <button
-          type="button"
-          onClick={handleDecrement}
-          className="w-full mt-4 py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
-        >
-          -
-        </button>
         <button
           type="submit"
           className="w-full mt-4 py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"

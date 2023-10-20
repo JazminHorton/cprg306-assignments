@@ -1,12 +1,11 @@
-"use client";
-
 import React, { useState } from 'react';
 
-const NewItem = () => {
+const NewItem = ({ onAddItem }) => {
   const [name, setName] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState('produce');
   const [error, setError] = useState('');
+
   const validateForm = () => {
     !name || name.trim() === ''
       ? setError('Name is required')
@@ -15,7 +14,7 @@ const NewItem = () => {
       : setError('');
     return !error;
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
@@ -24,8 +23,7 @@ const NewItem = () => {
         quantity,
         category,
       };
-      console.log(item);
-      alert(`Name: ${name}\nQuantity: ${quantity}\nCategory: ${category}`);
+      onAddItem(item); // Invoke the onAddItem prop with the item object
       setName('');
       setQuantity(1);
       setCategory('produce');
@@ -34,8 +32,11 @@ const NewItem = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="p-2 m-4 bg-black text-black max-w-sm w-full">
-      <h1 className="text-2xl text-center text-white max-w-sm w-full">Add new Item</h1>
+       <h2 className="text-2xl font-bold text-white mb-4">Week 6</h2>
+      <form
+        onSubmit={handleSubmit}
+        className="p-2 m-4 bg-black text-black max-w-sm w-full"
+      >
         <div className="mb-2">
           <input
             type="text"
@@ -48,7 +49,7 @@ const NewItem = () => {
             className="w-full mt-1 border-2 border-gray-300 p-2 rounded-lg font-sans"
           />
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify between">
           <input
             type="number"
             id="quantity"
@@ -66,7 +67,7 @@ const NewItem = () => {
               name="category"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-            >
+              >
               <option value="" disabled>Category</option>
               <option value="produce">Produce</option>
               <option value="dairy">Dairy</option>

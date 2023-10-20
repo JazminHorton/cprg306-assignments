@@ -5,26 +5,22 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div>
-        <h1 className="text-5xl font-bold">
-          CPRG 306: Web Development 2 - Assignments
-        </h1>
+      <h1 className="text-5xl font-bold">CPRG 306: Web Development 2 - Assignments</h1>
       </div>
-
-      <StudentInfo />
-
-      <div className="flex items-center text-2xl font-bold">
-        <p>
-          <Link href="/week2">Week 2</Link>
-          <br />
-          <Link href="/week3">Week 3</Link>
-          <br />
-          <Link href="/week4">Week 4</Link>
-          <br />
-          <Link href="/week5">Week 5</Link>
-          <br />
-          <Link href="/week6">Week 6</Link>
-        </p>
+      <StudentInfo></StudentInfo>
+      <div className ="flex items-center text-2xl font-bold">
+      <p>
+        <Link href="/week2">Week 2</Link>
+        <br />
+        <Link href="/week3">Week 3</Link>
+        <br />
+        <Link href="/week4">Week 4</Link>
+        <br />
+        <Link href="/week5">Week 5</Link>
+        <br />
+        <Link href="/week6">Week 6</Link>
+      </p>
       </div>
     </main>
-  );
+  )
 }

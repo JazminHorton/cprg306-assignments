@@ -22,7 +22,7 @@ function Page() {
     <main className="min-h-screen flex flex-col items-center justify-between p-24">
       <h1 className="text-4xl font-bold text-white mb-4 group">
         <a className="bg-black text-white px-4 py-2 relative group">
-          My Shopping List 🛒
+          Shopping List
         </a>
       </h1>
 
@@ -33,9 +33,9 @@ function Page() {
         <ItemList items={items} />
       </div>
 
-      {/* Link back to the homepage */}
+      {/* Link back to the home */}
       <Link href="/" className="text-white hover:underline mt-5">
-        Back to Home
+        Homepage
       </Link>
     </main>
   );

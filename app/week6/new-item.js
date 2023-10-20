@@ -32,7 +32,7 @@ const NewItem = ({ onAddItem }) => {
 
   return (
     <div>
-       <h2 className="text-2xl font-bold text-white mb-4">Week 6</h2>
+       <h2 className="text-2xl font-bold text-white mb-4">Add new item</h2>
       <form
         onSubmit={handleSubmit}
         className="p-2 m-4 bg-black text-black max-w-sm w-full"
@@ -69,17 +69,17 @@ const NewItem = ({ onAddItem }) => {
               onChange={(e) => setCategory(e.target.value)}
               >
               <option value="" disabled>Category</option>
-              <option value="produce">Produce</option>
-              <option value="dairy">Dairy</option>
-              <option value="bakery">Bakery</option>
-              <option value="meat">Meat</option>
-              <option value="frozen foods">Frozen Foods</option>
-              <option value="canned goods">Canned Goods</option>
-              <option value="dry goods">Dry Goods</option>
-              <option value="beverages">Beverages</option>
-              <option value="snacks">Snacks</option>
-              <option value="household">Household</option>
-              <option value="other">Other</option>
+              <option value="Produce">Produce</option>
+              <option value="Dairy">Dairy</option>
+              <option value="Bakery">Bakery</option>
+              <option value="Meat">Meat</option>
+              <option value="Frozen Foods">Frozen Foods</option>
+              <option value="Canned Goods">Canned Goods</option>
+              <option value="Dry Goods">Dry Goods</option>
+              <option value="Beverages">Beverages</option>
+              <option value="Snacks">Snacks</option>
+              <option value="Household">Household</option>
+              <option value="Other">Other</option>
             </select>
           </div>
         </div>

@@ -52,19 +52,19 @@ function ItemList({ items }) {
   return (
     <div className="container mx-auto mt-8">
       <div className="mb-4">
-        <label htmlFor="sortBySelect" className="text-white">
-          Sort by:
-        </label>
-        <select
-          id="sortBySelect"
-          value={sortBy}
-          onChange={handleSortChange}
-          className="mt-4 bg-dark-slate text-black p-2 rounded-md"
-        >
-          <option value="name">Name</option>
-          <option value="category">Category</option>
-        </select>
-      </div>
+      <label htmlFor="sortBySelect" className="text-white mr-2">
+        Sort by:
+      </label>
+      <select
+        id="sortBySelect"
+        value={sortBy}
+        onChange={handleSortChange}
+        className="mt-4 bg-dark-slate text-black p-2 rounded-md"
+      >
+        <option value="name">Name</option>
+        <option value="category">Category</option>
+      </select>
+    </div>
       <div className="mb-4">
         <button
           onClick={() => {

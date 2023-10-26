@@ -23,7 +23,7 @@ const NewItem = ({ onAddItem }) => {
         quantity,
         category,
       };
-      onAddItem(item); // Invoke the onAddItem prop with the item object
+      onAddItem(item); // render the onAddItem prop with the item object
       setName('');
       setQuantity(1);
       setCategory('produce');

@@ -21,7 +21,7 @@ function Page() {
     setSelectedItemName(cleanedName);
   };
 
-  const mainStyle = {
+  const pagePosition = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -35,7 +35,7 @@ function Page() {
   };
 
   return (
-    <main style={mainStyle} className="p-2 m-2">
+    <main style={pagePosition} className="p-2 m-2">
       <h1 className="text-4xl font-bold text-white mb-4 group">
         <a
           className="bg-black text-white px-4 py-2 relative group"

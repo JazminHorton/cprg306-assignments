@@ -11,8 +11,10 @@ export default function Home() {
         </div>
         <div className="container mx-auto p-4">
           <StudentInfo></StudentInfo>
-            <Link href="/">Home</Link>
         </div>
+        <Link href="/" className="text-white hover:underline mt-5">
+        Homepage
+        </Link>
       </main>
   
     );

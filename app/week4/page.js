@@ -6,7 +6,9 @@ export default function Page() {
         <main className="flex items-center flex-col">
             <h1 className="text-2xl">Week 4</h1>
             <NewItem/>
-            <Link href="/" className ="text-2xl ml-4">Home</Link>
+            <Link href="/" className="text-white hover:underline mt-5">
+            Homepage
+            </Link>
         </main>
     )
 }

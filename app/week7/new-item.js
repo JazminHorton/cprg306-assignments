@@ -32,7 +32,7 @@ const NewItem = ({ onAddItem }) => {
 
   return (
     <div>
-       <h2 className="text-2xl font-bold text-white mb-4">Assignment 7: Fetching APIs </h2>
+       <h2 className="text-2xl font-bold text-white mb-4">Add new item </h2>
       <form
         onSubmit={handleSubmit}
         className="p-2 m-4 bg-black text-black max-w-sm w-full"

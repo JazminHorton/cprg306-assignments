@@ -48,7 +48,7 @@ function Page() {
         <a
           className="bg-black text-white px-4 py-2 relative group"
         >
-          Shopping List
+          Shopping List + Meal Ideas
         </a>
         <div className="flex">
           <div className="flex-1 max-w-sm m-2"></div>

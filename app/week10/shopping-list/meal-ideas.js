@@ -58,7 +58,7 @@ const MealIdeas = ({ ingredient }) => {
     setHoveredMeal(meal);
   };
 
- 
+
   return (
     <div className="container mx-auto mt-8">
       <div className="mb-4 flex items-center">

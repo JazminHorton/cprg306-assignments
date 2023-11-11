@@ -7,4 +7,5 @@ const Layout =({children}) => {
         </AuthContextProvider>
     );
 };
+
 export default Layout; 

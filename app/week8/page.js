@@ -18,7 +18,7 @@ const LandingPage = () => {
             <div className="relative w-full overflow-hidden rounded-2xl max-w-lg bg-gray-200 shadow-inner p-8 mx-auto text-center shadow-xl">
                 {!user ? (
                     <>
-                        <h1 className="text-6xl text-orange-600 mb-4">Week 8</h1>
+                        <h1 className="text-6xl text-orange-600 mb-4">Week 8: Firebase Auth </h1>
                         <div className="flex flex-col items-center space-y-4 bg-white p-4 rounded-2xl shadow-inner shadow-xl border border-orange-600">
                             <p className="text-xl text-black">Please log in to access your shopping list.</p>
                             <button 
@@ -42,7 +42,7 @@ const LandingPage = () => {
                             </button>
                         </div>
                         <div className="mt-4">
-                            <Link href="/week8/shopping-list">
+                            <Link href="/week10/shopping-list">
                                   <div className="inline-block bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400">
                                     Shopping List
                                     </div>

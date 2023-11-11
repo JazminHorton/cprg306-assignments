@@ -1,11 +1,17 @@
 import {db} from '../_utils/firebase';
 import { collection, doc,getDocs, addDoc,deleteDoc, query } from "firebase/firestore";
 
+
 export async function getShoppingList(userId) {
     try {
+
         const itemsRef = collection(db, 'users', userId, 'items');
+
+
         const q = query(itemsRef);
         const querySnapshot = await getDocs(q);
+
+
         const items = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         return items;
     } catch (error) {

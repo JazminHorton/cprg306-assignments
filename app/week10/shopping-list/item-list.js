@@ -1,15 +1,18 @@
 "use client";
 import React, { useState } from 'react';
 
+
 function ItemList({ items, onItemSelect, onDeleteItem }) {
   const [sortBy, setSortBy] = useState('name');
   const [grouped, setGrouped] = useState(false);
- 
+
+
   const sortFunctions = {
     name: (a, b) => a.name.localeCompare(b.name),
     category: (a, b) => a.category.localeCompare(b.category),
   };
-  
+
+
   const sortedItems = [...items].sort(sortFunctions[sortBy]);
 
   const handleGroupClick = () => {
@@ -18,7 +21,8 @@ function ItemList({ items, onItemSelect, onDeleteItem }) {
       setSortBy('name'); 
     }
   };
- 
+
+
   const groupedItems = grouped
     ? sortedItems.reduce((acc, item) => {
         const category = item.category.toLowerCase();
@@ -27,6 +31,7 @@ function ItemList({ items, onItemSelect, onDeleteItem }) {
         return acc;
       }, {})
     : null;
+
 
   const handleItemClick = (item) => {
     if (onItemSelect) {
@@ -38,6 +43,7 @@ function ItemList({ items, onItemSelect, onDeleteItem }) {
     event.stopPropagation(); 
     onDeleteItem(itemId);
   };
+
 
   return (
     <div className="container mx-auto mt-8">

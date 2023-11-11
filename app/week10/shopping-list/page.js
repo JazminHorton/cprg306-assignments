@@ -4,14 +4,14 @@ import Link from 'next/link';
 import ItemList from './item-list';
 import NewItem from './new-item';
 import MealIdeas from './meal-ideas';
-import { getShoppingList, addItem, deleteItem } from '../_services/shopping-list-service';
+import { getShoppingList, addItem, deleteItem } from '../_services/shopping-list-services';
 import { useUserAuth } from "../_utils/auth-context";
+
 
 function Page() {
   const { user } = useUserAuth();
   const [items, setItems] = useState([]);
   const [selectedItemName, setSelectedItemName] = useState(null);
-
 
   useEffect(() => {
     if (!user) {
@@ -79,12 +79,9 @@ function Page() {
     <main style={pagePosition} className="p-2 m-2">
       <h1 className="text-4xl font-bold text-white mb-4 group">
         <a
-          href="https://github.com/Goqwin"
-          target="_blank"
-          rel="noopener noreferrer"
           className="bg-black text-white px-4 py-2 relative group"
         >
-          Shopping List + Meal Ideas
+          Shopping list + meal ideas
         </a>
       </h1>
       <div className="flex justify-center w-full md:w-3/4 lg:w-2/3 gap-4">

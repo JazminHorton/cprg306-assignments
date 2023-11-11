@@ -34,7 +34,7 @@ export default function Page() {
     }
     
     return (
-        <main className="flex items-center justify-center h-screen" style={backgroundImageStyle}>
+        <main className="flex items-center justify-center h-screen" style={pagePosition}>
           <div className="bg-white max-w-2xl w-full h-auto p-8 rounded shadow-2xl border-8 border-black ">
             <div className="flex items-center justify-center mb-10 flex-col">
               <h3 className="text-gray-700 text-lg font-bold">Successfully Authenticated</h3>

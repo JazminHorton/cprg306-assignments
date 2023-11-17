@@ -7,7 +7,6 @@ import MealIdeas from './meal-ideas';
 import { getShoppingList, addItem, deleteItem } from '../_services/shopping-list-services';
 import { useUserAuth } from "../_utils/auth-context";
 
-
 function Page() {
   const { user } = useUserAuth();
   const [items, setItems] = useState([]);
@@ -21,7 +20,6 @@ function Page() {
     }
   }, [user]);
 
-
   const handleAddItem = async (newItem) => {
     try {
       const itemToAdd = {
@@ -29,7 +27,8 @@ function Page() {
         category: newItem.category.toLowerCase()
       };
   
-      const addedItem = await addItem(user.uid, itemToAdd);
+      const id = await addItem(user.uid, itemToAdd);
+      const addedItem = { ...itemToAdd, id };
       setItems(prevItems => [...prevItems, addedItem]);
     } catch (error) {
       console.error('Error adding item:', error);

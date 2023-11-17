@@ -57,7 +57,7 @@ function ItemList({ items, onItemSelect, onDeleteItem }) {
             setGrouped(false);
           }}
           className={`${
-            sortBy === 'name' && !grouped ? 'bg-orange-500 text-white' : 'bg-gray-400 text-gray-800'
+            sortBy === 'name' && !grouped ? 'bg-purple-500 text-white' : 'bg-gray-400 text-gray-800'
           } px-4 py-2 rounded-md mx-2`}
         >
           Name
@@ -68,7 +68,7 @@ function ItemList({ items, onItemSelect, onDeleteItem }) {
             setGrouped(false);
           }}
           className={`${
-            sortBy === 'category' && !grouped ? 'bg-orange-500 text-white' : 'bg-gray-400 text-gray-800'
+            sortBy === 'category' && !grouped ? 'bg-purple-500 text-white' : 'bg-gray-400 text-gray-800'
           } px-4 py-2 rounded-md mx-2`}
         >
           Category
@@ -76,7 +76,7 @@ function ItemList({ items, onItemSelect, onDeleteItem }) {
         <button
           onClick={handleGroupClick}
           className={`${
-            grouped ? 'bg-orange-500 text-white' : 'bg-gray-400 text-gray-800'
+            grouped ? 'bg-purple-500 text-white' : 'bg-gray-400 text-gray-800'
           } px-4 py-2 rounded-md mx-2`}
         >
           Group by Category

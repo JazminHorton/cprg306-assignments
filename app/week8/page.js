@@ -42,7 +42,7 @@ const LandingPage = () => {
                             </button>
                         </div>
                         <div className="mt-4">
-                            <Link href="/week10/shopping-list">
+                            <Link href="/week8/shopping-list">
                                   <div className="inline-block bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400">
                                     Shopping List
                                     </div>
